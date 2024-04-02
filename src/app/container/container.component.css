@@ -1,5 +1,6 @@
 .ekart--product--container{
-    padding: 10px 30px;
+    margin: 20px auto;
+    justify-content: center;
 }
 button{
     padding: 1px 3px;
