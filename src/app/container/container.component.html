@@ -3,5 +3,30 @@
     <!-- <div *ngFor="let item of listOfString">
         <p>Current element of the array is: {{ item }}</p>
     </div> -->
-    <product-list [searchText]="searchText"></product-list>
+    <product-list
+        [searchText]="searchText" #productListComponent>
+    </product-list>
+    <product-detail
+        *ngIf="productListComponent.selectedProduct"
+        [productListComp]="productListComponent">
+    </product-detail>
+
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h1>Latest Arrival in Popular Brands</h1>
+        </div>
+
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+            <button class="call-to-action">Show New Arrivals in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Adidas</h3>
+            <button class="call-to-action">Show New Arrivals in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Reebok</h3>
+            <button class="call-to-action">Show New Arrivals in Nike</button>
+        </featured-brands>
+    </div>
 </div>
